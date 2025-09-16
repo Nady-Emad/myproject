@@ -48,17 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const certificatesCount = document.getElementById('certificates-count');
   const experienceCount = document.getElementById('experience-count');
 
-  const projects = 10; // عدد المشاريع المكتملة
+  // حساب عدد المشاريع بناءً على عدد البطاقات داخل قسم My Projects فقط
+  const projects = document.querySelectorAll('section[data-aos="fade-up"]#projects .grid .card').length; 
   const certificates = document.querySelectorAll('.cert-marquee img').length / 2; // عدد الشهادات
-  const experience = new Date().getFullYear() - 2024; // إذا كانت الخبرة بدأت في 2024
+  const experience = "Beginners"; // تغيير النص إلى "Beginners"
 
   let count = 0;
   const interval = setInterval(() => {
-    if (count <= projects) projectsCount.textContent = count;
+    if (count <= projects) projectsCount.textContent = count; // تحديث عداد المشاريع
     if (count <= certificates) certificatesCount.textContent = count;
-    if (count <= experience) experienceCount.textContent = count;
 
-    if (count >= Math.max(projects, certificates, experience)) clearInterval(interval);
+    if (count >= Math.max(projects, certificates)) {
+      clearInterval(interval);
+      experienceCount.textContent = experience; // تعيين النص النهائي لـ "Beginners"
+    }
     count++;
   }, 100);
 });
