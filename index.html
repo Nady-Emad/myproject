@@ -1,13 +1,278 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Nady Emad - Cyber Security Student">
+  <meta name="keywords" content="Nady Emad, Cyber Security, Networking, Portfolio">
+  <title>Nady Emad</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-<body>
-    <h1>hi</h1>
-    <script src="app.js"></script>
+<body class="dark">
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" id="darkToggle" aria-label="Toggle Dark Mode">☀</button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <div class="profile-image">
+        <img src="profile.jpg" alt="Profile picture of Nady Emad - Cyber Security Student" loading="lazy">
+      </div>
+      <h1>Nady Emad</h1>
+      <p class="subtitle">Student - Networks and Cyber Security, SUT University</p>
+      <a href="#contact" class="cta-button">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cyber Security</h3>
+        <p>I specialize in network security, penetration testing, and vulnerability assessment. I am passionate about protecting systems and data from cyber threats.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>I build responsive, secure, and high-performance web applications using modern technologies. I enjoy creating user-friendly and visually appealing designs.</p>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <p>I am currently a student at SUT University, majoring in Networks and Cyber Security. I am constantly learning and improving my skills to stay updated with the latest trends in technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="section" id="skills" data-aos="fade-up">
+    <h2 class="section-title">My Technical Skills</h2>
+    <p class="section-subtitle">I have expertise in a wide range of technologies and tools.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Python</h3>
+        <span class="skill-tag">programming</span>
+      </div>
+      <div class="skill-card">
+        <h3>Linux</h3>
+        <span class="skill-tag">os</span>
+      </div>
+      <div class="skill-card">
+        <h3>CSS</h3>
+        <span class="skill-tag">frontend</span>
+      </div>
+      <div class="skill-card">
+        <h3>C++</h3>
+        <span class="skill-tag">programming</span>
+      </div>
+      <div class="skill-card">
+        <h3>Java</h3>
+        <span class="skill-tag">programming</span>
+      </div>
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <span class="skill-tag">programming</span>
+      </div>
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <span class="skill-tag">frontend</span>
+      </div>
+      <div class="skill-card">
+        <h3>React</h3>
+        <span class="skill-tag">frontend</span>
+      </div>
+      <div class="skill-card">
+        <h3>Node.js</h3>
+        <span class="skill-tag">backend</span>
+      </div>
+      <div class="skill-card">
+        <h3>Network Security</h3>
+        <span class="skill-tag">security</span>
+      </div>
+      <div class="skill-card">
+        <h3>Penetration Testing</h3>
+        <span class="skill-tag">security</span>
+      </div>
+      <div class="skill-card">
+        <h3>Vulnerability Assessment</h3>
+        <span class="skill-tag">security</span>
+      </div>
+      <div class="skill-card">
+        <h3>Git</h3>
+        <span class="skill-tag">tools</span>
+      </div>
+      <div class="skill-card">
+        <h3>Docker</h3>
+        <span class="skill-tag">tools</span>
+      </div>
+      <div class="skill-card">
+        <h3>SQL</h3>
+        <span class="skill-tag">database</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">📜 My Certificates</h2>
+    <div class="cert-marquee">
+      <div class="cert-track">
+        <!-- First Group -->
+        <img src="certificates/Course_Certificate_Ar-1.png" alt="Cyber Security Certificate in Arabic">
+        <img src="certificates/Course_Certificate_Ar_2-1.png" alt="Another Cyber Security Certificate in Arabic">
+        <img src="certificates/Course_Certificate_En-1.png" alt="Cyber Security Certificate in English">
+        <img src="certificates/Course_Certificate_En_2-1.png" alt="Another Cyber Security Certificate in English">
+        <img src="certificates/Nady Emad Nady Poles-.png" alt="Nady Emad Nady Poles Certificate">
+
+        <!-- Repeat the same group for seamless looping -->
+        <img src="certificates/Course_Certificate_Ar-1.png" alt="Cyber Security Certificate in Arabic">
+        <img src="certificates/Course_Certificate_Ar_2-1.png" alt="Another Cyber Security Certificate in Arabic">
+        <img src="certificates/Course_Certificate_En-1.png" alt="Cyber Security Certificate in English">
+        <img src="certificates/Course_Certificate_En_2-1.png" alt="Another Cyber Security Certificate in English">
+        <img src="certificates/Nady Emad Nady Poles-.png" alt="Nady Emad Nady Poles Certificate">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" data-aos="fade-up">
+    <h2 class="section-title">My Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Project Name</h3>
+        <p>Brief description of the project.</p>
+        <a href="https://github.com/Nady-Emad/project-link" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Add more projects -->
+    </div>
+  </section>
+
+  <!-- Counter Section -->
+<section class="section" id="counter" data-aos="fade-up">
+  <h2 class="section-title">Achievements</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 id="projects-count">0</h3>
+      <p>Completed Projects</p>
+    </div>
+    <div class="card">
+      <h3 id="certificates-count">0</h3>
+      <p>Certificates</p>
+    </div>
+    <div class="card">
+      <h3 id="experience-count">0</h3>
+      <p>Years of Experience</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section class="hero" id="contact">
+    <div class="section">
+      <h2 class="section-title" style="color:white">Contact Information</h2>
+      <div class="grid">
+        <div class="contact-item" onclick="openLink('https://github.com/Nady-Emad', 'GitHub')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png" alt="GitHub Profile" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>GitHub</span>
+        </div>
+
+        <div class="contact-item" onclick="openLink('https://www.linkedin.com/in/nadyemad/', 'LinkedIn')">
+          <img src="https://images.icon-icons.com/70/PNG/512/linkedin_14170.png" alt="LinkedIn Profile" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>LinkedIn</span>
+        </div>
+
+        <div class="contact-item" onclick="openLink('https://www.instagram.com/nady.emad.nady/', 'Instagram')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Profile" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>Instagram</span>
+        </div>
+
+        <div class="contact-item" onclick="openLink('https://wa.me/201205855148', 'WhatsApp')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/250px-WhatsApp.svg.png" alt="WhatsApp Contact" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>WhatsApp</span>
+        </div>
+
+        <div class="contact-item" onclick="openLink('https://www.facebook.com/nady.emad.75/', 'Facebook')">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfbcYeYgf0wQJ-LSPm3CPbyB7T1p0f5bnaA&s" alt="Facebook Profile" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>Facebook</span>
+        </div>
+
+        <div class="contact-item" onclick="openLink('mailto:nady240102590@sut.edu.eg', 'Email')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Microsoft_Outlook_new_logo.svg/1200px-Microsoft_Outlook_new_logo.svg.png" alt="Email Contact" style="width:48px;height:48px;border-radius:50%;background:white;padding:6px;">
+          <span>Email</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section" id="contact-form" data-aos="fade-up">
+  <h2 class="section-title">Send Me a Message</h2>
+  <p class="section-subtitle">Fill out the form below and I'll get back to you as soon as possible.</p>
+  <form action="mailto:nady240102590@sut.edu.eg" method="post" enctype="text/plain" class="contact-form">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="cta-button">
+      <span>Send Message</span>
+    </button>
+  </form>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Nady Emad. All rights reserved.</p>
+    <p>Designed with ❤️ to support dark mode.</p>
+  </footer>
+
+  <!-- Toast Notification -->
+<div id="toast" style="display:none; position:fixed; bottom:20px; right:20px; background:#333; color:#fff; padding:10px 20px; border-radius:5px; z-index:1000;">Link opened successfully!</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" style="display:none; position:fixed; bottom:20px; right:20px; background:#764ba2; color:#fff; border:none; padding:10px 15px; border-radius:50%; cursor:pointer; z-index:1000;">↑</button>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="app.js" defer></script>
+  <script>
+    AOS.init();
+
+    // Open links with confirmation
+    function openLink(url, platform) {
+      if (confirm(`You will be redirected to ${platform}. Do you want to continue?`)) {
+        if (url.startsWith("mailto:") || url.startsWith("tel:") || url.includes("wa.me")) {
+          window.location.href = url; // يفتح البريد أو الواتساب مباشرة
+        } else {
+          window.open(url, '_blank', 'noopener,noreferrer'); // يفتح الروابط الأخرى في نافذة جديدة
+        }
+      }
+    }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const darkToggle = document.getElementById('darkToggle');
+  if (document.body.classList.contains('dark')) {
+    darkToggle.textContent = '☀';
+    darkToggle.setAttribute('aria-label', 'تبديل إلى الوضع النهاري');
+  } else {
+    darkToggle.textContent = '🌙';
+    darkToggle.setAttribute('aria-label', 'تبديل إلى الوضع الليلي');
+  }
+});
+  </script>
 </body>
 </html>
