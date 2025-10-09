@@ -51,6 +51,17 @@
 // Smooth scroll + scroll-spy for header nav
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.l-header .nav a');
+  const nav = document.querySelector('.l-header .nav');
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+    // close nav when a link is clicked (mobile)
+    navLinks.forEach(a => a.addEventListener('click', () => { if (nav.classList.contains('open')) nav.classList.remove('open'); }));
+  }
   const sections = [];
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
@@ -64,7 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           const t = document.querySelector(href);
           if (!t) return;
-          const top = t.getBoundingClientRect().top + window.scrollY - 80; // account for header
+          // compute header height dynamically to support mobile/desktop
+          const header = document.querySelector('.l-header');
+          const headerHeight = header ? header.getBoundingClientRect().height + 12 : 88; // fallback
+          const top = t.getBoundingClientRect().top + window.scrollY - headerHeight; // account for header
           window.scrollTo({ top, behavior: 'smooth' });
         });
       }
@@ -236,14 +250,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Back to Top Button Logic
 const backToTop = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTop.style.display = 'block';
-  } else {
-    backToTop.style.display = 'none';
-  }
-});
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
 
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
