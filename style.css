@@ -263,6 +263,12 @@ body.dark #home.hero, body.dark .hero {
   color: #cbd5e1; /* لون النص الأساسي */
 }
 
+/* Force contact hero explicit dark styling when dark mode is active */
+body.dark section#contact.hero {
+  background: #0B1420; /* slightly different darker tone for contact */
+  color: #e6eef8;
+}
+
 /* Contact Items */
 .contact-item {
   background: rgba(255, 255, 255, 0.15); /* لون خلفية البطاقات */
