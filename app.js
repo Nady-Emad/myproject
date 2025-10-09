@@ -1,15 +1,94 @@
-// Toggle Dark Mode
-document.addEventListener('DOMContentLoaded', () => {
-  const darkToggle = document.getElementById('darkToggle');
-  if (document.body.classList.contains('dark')) {
-    darkToggle.textContent = '☀';
-    darkToggle.setAttribute('aria-label', 'تبديل إلى الوضع النهاري');
-  } else {
-    darkToggle.textContent = '🌙';
-    darkToggle.setAttribute('aria-label', 'تبديل إلى الوضع الليلي');
+// (Removed legacy left-side dark-toggle button handling - theme switch now uses checkbox)
+
+// Theme switch persistence and wiring
+(() => {
+  const THEME_KEY = 'theme';
+  const root = document.documentElement;
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
   }
-  darkToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem(THEME_KEY);
+  const themeToggle = document.getElementById('theme-toggle');
+  // optional legacy button - may not exist in the current markup
+  const darkToggle = document.getElementById('darkToggle');
+
+    // apply saved theme or fallback to existing body class
+    if (saved) applyTheme(saved);
+    else if (document.body.classList.contains('dark')) localStorage.setItem(THEME_KEY, 'dark');
+
+    // set checkbox state
+    if (themeToggle) themeToggle.checked = document.body.classList.contains('dark');
+
+    // listen for checkbox changes
+    if (themeToggle) themeToggle.addEventListener('change', (e) => {
+      const theme = e.target.checked ? 'dark' : 'light';
+      applyTheme(theme);
+      localStorage.setItem(THEME_KEY, theme);
+      if (darkToggle) darkToggle.textContent = theme === 'dark' ? '☀' : '🌙';
+    });
+
+    // keep dark-toggle button in sync (only if it exists)
+    if (darkToggle) {
+      darkToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark');
+        const newTheme = isDark ? 'light' : 'dark';
+        applyTheme(newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+        if (themeToggle) themeToggle.checked = newTheme === 'dark';
+        darkToggle.textContent = newTheme === 'dark' ? '☀' : '🌙';
+      });
+    }
+  });
+})();
+
+// Smooth scroll + scroll-spy for header nav
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.l-header .nav a');
+  const sections = [];
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const target = document.querySelector(href);
+      if (target) {
+        sections.push({ id: href, el: target, link });
+
+        // smooth scroll on click (compute target position at click time)
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const t = document.querySelector(href);
+          if (!t) return;
+          const top = t.getBoundingClientRect().top + window.scrollY - 80; // account for header
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      }
+    }
+  });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = `#${entry.target.id}`;
+      const found = navLinks && Array.from(navLinks).find(a => a.getAttribute('href') === id);
+      if (found) {
+        if (entry.isIntersecting) {
+          found.classList.add('active');
+        } else {
+          found.classList.remove('active');
+        }
+      }
+    });
+  }, { threshold: 0.45 });
+
+  sections.forEach(s => {
+    // ensure section has an id
+    if (!s.el.id) s.el.id = s.id.replace('#','');
+    obs.observe(s.el);
   });
 });
 
@@ -41,6 +120,95 @@ document.addEventListener('DOMContentLoaded', function() {
     img.loading = 'lazy';
   });
 });
+
+// Vanilla BlurText-like animation (works without React)
+(() => {
+  const buildKeyframes = (from, steps) => {
+    const keys = new Set([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
+    const keyframes = [];
+    // Build an array of keyframe objects for the Web Animations API
+    const stepObjects = [from, ...steps];
+    return stepObjects;
+  };
+
+  const defaultFrom = (direction) => (direction === 'top' ? { filter: 'blur(10px)', opacity: 0, transform: 'translateY(-50px)' } : { filter: 'blur(10px)', opacity: 0, transform: 'translateY(50px)' });
+  const defaultTo = (direction) => [
+    { filter: 'blur(5px)', opacity: 0.5, transform: direction === 'top' ? 'translateY(5px)' : 'translateY(-5px)' },
+    { filter: 'blur(0px)', opacity: 1, transform: 'translateY(0)' }
+  ];
+
+  function animateBlurTextElement(el) {
+    const animateBy = el.dataset.animateBy || 'words';
+    const delay = Number(el.dataset.delay || 150);
+    const direction = el.dataset.direction || 'top';
+    const stepDuration = Number(el.dataset.stepDuration || 0.35);
+    const easing = el.dataset.easing || 'ease';
+
+    const rawText = el.textContent.trim();
+    const segments = animateBy === 'words' ? rawText.split(' ') : rawText.split('');
+    el.textContent = '';
+
+    const from = defaultFrom(direction);
+    const toSteps = defaultTo(direction);
+    const stepCount = toSteps.length + 1;
+    const totalDuration = stepDuration * (stepCount - 1) * 1000; // ms
+
+    segments.forEach((seg, idx) => {
+      const span = document.createElement('span');
+      span.className = 'inline-block blur-segment';
+      span.style.display = 'inline-block';
+      span.style.willChange = 'transform,filter,opacity';
+      span.textContent = seg === ' ' ? '\u00A0' : seg;
+      if (animateBy === 'words' && idx < segments.length - 1) span.insertAdjacentText('beforeend', '\u00A0');
+      el.appendChild(span);
+
+      const keyframes = [from, ...toSteps];
+      const options = {
+        duration: totalDuration,
+        easing: easing,
+        fill: 'forwards',
+        delay: (idx * delay)
+      };
+
+      // Use the Web Animations API
+      const anim = span.animate(keyframes.map(k => {
+        // Map transform property to proper CSS
+        const frame = Object.assign({}, k);
+        if (frame.y !== undefined) {
+          frame.transform = `translateY(${frame.y}px)`;
+          delete frame.y;
+        }
+        return frame;
+      }), options);
+
+      // When last segment finishes, log completion
+      if (idx === segments.length - 1) {
+        anim.onfinish = () => {
+          // Allow any external handler via data attribute name, otherwise console.log
+          const cbName = el.dataset.onComplete;
+          if (cbName && typeof window[cbName] === 'function') window[cbName]();
+          else console.log('Animation completed!');
+        };
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const els = document.querySelectorAll('.blur-text');
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateBlurTextElement(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    els.forEach(el => observer.observe(el));
+  });
+})();
 
 // Counter Logic
 document.addEventListener('DOMContentLoaded', () => {
