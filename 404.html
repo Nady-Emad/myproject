@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>404 — لا تدخل</title>
+  <style>
+    :root{--bg:#000;--green:#39ff14;--muted:#0b0b0b}
+    html,body{height:100%;margin:0}
+    body{background:var(--bg);color:var(--green);font-family:Consolas,monospace,Arial,Helvetica,sans-serif;display:flex;align-items:center;justify-content:center}
+    .wrap{max-width:900px;padding:40px;text-align:center;position:relative}
+    .binary{font-size:10rem;line-height:0.8;letter-spacing:0.5rem;font-weight:900;display:block;z-index:3;position:relative}
+    .binary .one{color:var(--green)}
+    .subtitle{color:rgba(57,255,20,0.9);font-size:2rem;margin-top:8px}
+
+    /* hacker panel */
+    .panel{background:linear-gradient(0deg, rgba(0,0,0,0.6), rgba(8,8,8,0.8));border:1px solid rgba(57,255,20,0.12);padding:28px;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6);display:flex;gap:28px;align-items:center;justify-content:center;z-index:3;position:relative}
+
+    /* character */
+    .char{width:180px;height:180px;background:var(--muted);border-radius:12px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:2px solid rgba(57,255,20,0.06)}
+    .face{width:110px;height:110px;background:#07100a;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+    .eyes{display:flex;gap:18px}
+    .eye{width:18px;height:18px;background:var(--green);border-radius:50%;box-shadow:0 0 14px rgba(57,255,20,0.6), inset 0 -2px 6px rgba(0,0,0,0.6)}
+    .mouth{width:48px;height:10px;border-radius:6px;background:transparent;border:2px solid rgba(57,255,20,0.5);margin-top:10px}
+
+    /* head wrap to animate */
+    .head{display:inline-block;transform-origin:50% 20%}
+    .shake{animation:shake 1s ease-in-out infinite}
+    @keyframes shake{0%{transform:rotate(0)}15%{transform:rotate(-12deg)}30%{transform:rotate(8deg)}45%{transform:rotate(-6deg)}60%{transform:rotate(4deg)}100%{transform:rotate(0)}}
+
+    .message{font-size:1.6rem;color:var(--green);margin-top:6px}
+    .muted{color:rgba(57,255,20,0.35);font-size:0.95rem;margin-top:10px}
+
+    .actions{margin-top:18px;display:flex;gap:12px;justify-content:center}
+    .btn{background:transparent;color:var(--green);border:1px solid rgba(57,255,20,0.2);padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+    .btn:hover{background:rgba(57,255,20,0.03)}
+
+    /* canvas covers the screen for binary rain */
+    canvas#rain{position:fixed;left:0;top:0;width:100%;height:100%;z-index:1;pointer-events:none}
+
+    /* small responsive */
+    @media (max-width:640px){.panel{flex-direction:column;padding:20px}.binary{font-size:6rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+  <canvas id="rain" aria-hidden="true"></canvas>
+    <div class="panel">
+      <div class="char" aria-hidden="true">
+        <div class="head" id="head">
+          <div class="face">
+            <div class="eyes">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="mouth"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center">
+        <div class="subtitle">DO NOT ENTER</div>
+        <div class="message">This area is not for intruders — please return to the homepage.</div>
+        <div class="muted">Error 404 — Page not found</div>
+        <div class="actions">
+          <a class="btn" href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // keep head shaking by default
+    const head = document.getElementById('head');
+    head.classList.add('shake');
+
+    // Binary rain (0/1) effect using canvas
+    const canvas = document.getElementById('rain');
+    const ctx = canvas.getContext('2d');
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    let fontSize = 14;
+    function initDrops(){
+      const cols = Math.floor(canvas.width / fontSize) || 50;
+      drops = new Array(cols).fill(0).map(() => Math.random() * canvas.height / fontSize);
+    }
+    let drops = [];
+    initDrops();
+    window.addEventListener('resize', () => { initDrops(); });
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0,0,0,0.15)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(57,255,20,0.9)';
+      ctx.font = `${fontSize}px monospace`;
+      for (let i = 0; i < drops.length; i++) {
+        const text = Math.random() > 0.5 ? '0' : '1';
+        const x = i * fontSize;
+        const y = drops[i] * fontSize;
+        ctx.fillText(text, x, y);
+        if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+        drops[i] += 0.9 + Math.random() * 1.8;
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+  </script>
+</body>
+</html>
