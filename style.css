@@ -211,19 +211,35 @@ body {
   .nav a { display: block; padding: 12px 10px; color: var(--text-primary); }
   .nav-toggle { display: inline-block; background: transparent; border: none; color: var(--text-primary); font-size: 1.35rem; cursor: pointer; padding: 8px; border-radius: 8px; }
 
-  /* move the nav toggle (third item) to the right on mobile */
+  /* Ensure the left cluster (brand + theme switch) expands and leaves room for the hamburger */
+  .l-header-inner > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 auto; /* allow it to take available space */
+    min-width: 0; /* prevent overflow */
+  }
+
+  /* add right padding so the left cluster content doesn't underlap the hamburger */
+  .l-header-inner { padding-right: 84px; }
+
+  /* move the nav toggle (third item) to the right on mobile with larger touch area */
   .nav-toggle {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1100;
+    padding: 10px; /* larger touch target */
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px;
   }
 
   /* Certificates: disable marquee animation and wrap images on small devices */
-  .cert-track { animation: none; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .cert-marquee { overflow: visible; padding: 12px 0; }
-  .cert-marquee img { height: 140px; margin: 8px; }
+  /* Certificates: keep single horizontal row and allow horizontal scroll on small devices */
+  .cert-track { animation: none; display: inline-flex; flex-wrap: nowrap; gap: 12px; justify-content: flex-start; }
+  .cert-marquee { overflow-x: auto; overflow-y: hidden; padding: 12px 0; }
+  .cert-marquee img { height: 140px; margin: 8px; flex-shrink: 0; }
 }
 
 /* Section */
@@ -392,6 +408,8 @@ body.dark .footer {
 .cert-track {
   display: inline-flex;
   animation: scrollCertificates 40s linear infinite;
+  white-space: nowrap; /* ensure items stay on one line */
+  flex-wrap: nowrap; /* prevent wrapping */
 }
 
 .cert-marquee img {
@@ -406,6 +424,21 @@ body.dark .footer {
 .cert-marquee img:hover {
   transform: scale(1.1);
 }
+
+/* Keep the certificates area visually identical in dark mode.
+   The user requested: "إجعل 📜 My Certificates كما هي في اي وضع لا تعدل عليها" --> force light appearance. */
+body.dark .cert-marquee {
+  background: var(--card-bg); /* keep the same card background */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08); /* lighter shadow like light mode */
+  color: var(--text-primary);
+}
+
+body.dark .cert-marquee img {
+  /* keep images' visual treatment consistent */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  filter: none; /* avoid dark-mode filters */
+}
+
 
 @keyframes scrollCertificates {
   from { transform: translateX(0); }
@@ -451,6 +484,25 @@ body.dark .footer {
     font-size: 1.1rem;
   }
 }
+
+/* Always force certificates into a single horizontal row and enable horizontal scrolling on small screens.
+   Hiding native scrollbars for a cleaner appearance but allowing touch/trackpad scroll. */
+.cert-marquee {
+  overflow-x: auto; /* allow horizontal scrolling when content overflows */
+  overflow-y: hidden;
+}
+
+.cert-track {
+  display: inline-flex; /* ensure a single horizontal line */
+  gap: 0; /* spacing handled by image margins */
+}
+
+/* Hide scrollbars (WebKit + Firefox) but keep scrolling functional */
+.cert-marquee::-webkit-scrollbar { height: 8px; }
+.cert-marquee::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 4px; }
+.cert-marquee { -ms-overflow-style: none; scrollbar-width: thin; }
+.cert-marquee::-webkit-scrollbar { display: none; }
+
 
 @media (max-width: 480px) {
   .profile-image {
