@@ -92,6 +92,7 @@ body {
   font-weight: 700; 
   margin-bottom: 10px; 
 }
+.contact-title { color: white; }
 .hero .subtitle { 
   font-size: 1.2rem; 
   font-weight: 400; 
@@ -168,6 +169,7 @@ body {
   width: calc(100% - 120px);
   max-width: 1100px;
   background: rgba(255,255,255,0.06);
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -179,6 +181,9 @@ body {
   justify-content: space-between;
   padding: 12px 20px;
 }
+/* small helpers for items moved from inline -> classes */
+.header-left { display:flex; align-items:center; gap:12px; }
+
 .brand {
   font-weight: 700;
   color: var(--text-primary);
@@ -256,8 +261,8 @@ body {
   /* Animated gradient text using the requested color palette */
   background: linear-gradient(90deg, #40ffaa 0%, #4079ff 25%, #40ffaa 50%, #4079ff 75%, #40ffaa 100%);
   background-size: 200% 100%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 6s linear infinite;
 }
@@ -328,6 +333,7 @@ body.dark section#contact.hero {
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  -webkit-user-select: none;
   user-select: none; /* منع تحديد النصوص داخل العنصر */
   transform: translateZ(0); /* إصلاح أي مشاكل في الترتيب */
 }
@@ -346,6 +352,7 @@ body.dark section#contact.hero {
   padding: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف للصورة */
 }
+.contact-icon { width:48px; height:48px; border-radius:50%; background:white; padding:6px; }
 
 .contact-item span {
   font-weight: 600;
@@ -381,6 +388,11 @@ body.dark .footer {
   background: #0F172B; /* نفس لون القسم */
   color: #94a3b8; /* لون النص في الوضع الداكن */
   border-top: 1px solid rgba(255, 255, 255, 0.1); /* خط علوي خفيف */
+}
+
+/* Panel helper for 404 and similar centered blocks */
+.panel-content {
+  text-align: center;
 }
 
 /* Animations */
@@ -454,8 +466,8 @@ body.dark .cert-marquee img {
 /* Optional helper for any other gradient text uses */
 .animated-gradient-text .text-content, .gradient-text {
   background-size: 200% 100%;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientShift 6s linear infinite;
 }
@@ -706,6 +718,25 @@ body.dark .skill-tag {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+
+/* Footer small helpers (moved from inline attributes in index.html) */
+.footer-404 a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.footer-404 a:hover { background: rgba(0,0,0,0.04); transform: translateY(-2px); }
+
+/* Toast and Back-to-Top moved from inline */
+#toast.toast { display:none; position:fixed; bottom:20px; right:20px; background:#333; color:#fff; padding:10px 20px; border-radius:5px; z-index:1000; }
+.back-to-top { display:none; position:fixed; bottom:20px; right:20px; background:#764ba2; color:#fff; border:none; padding:10px 15px; border-radius:50%; cursor:pointer; z-index:1000; }
+
 
 .contact-form .form-grid {
   display: grid;
