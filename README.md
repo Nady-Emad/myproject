@@ -468,10 +468,4 @@ This portfolio website and associated projects are shared for educational and pr
 
 ---
 
-<div>
-
-**[⬆ Back to Top](#)** | **[📧 Contact](#)** | **[🌐 Visit Site](#)**
-
-</div>
-
 </div>
