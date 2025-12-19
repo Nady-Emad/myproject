@@ -1,6 +1,3 @@
-// (Removed legacy left-side dark-toggle button handling - theme switch now uses checkbox)
-
-// Theme switch persistence and wiring
 (() => {
   const THEME_KEY = 'theme';
   const root = document.documentElement;
@@ -14,19 +11,15 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem(THEME_KEY);
-  const themeToggle = document.getElementById('theme-toggle');
-  // optional legacy button - may not exist in the current markup
-  const darkToggle = document.getElementById('darkToggle');
+    const saved = localStorage.getItem(THEME_KEY);
+    const themeToggle = document.getElementById('theme-toggle');
+    const darkToggle = document.getElementById('darkToggle');
 
-    // apply saved theme or fallback to existing body class
     if (saved) applyTheme(saved);
     else if (document.body.classList.contains('dark')) localStorage.setItem(THEME_KEY, 'dark');
 
-    // set checkbox state
     if (themeToggle) themeToggle.checked = document.body.classList.contains('dark');
 
-    // listen for checkbox changes
     if (themeToggle) themeToggle.addEventListener('change', (e) => {
       const theme = e.target.checked ? 'dark' : 'light';
       applyTheme(theme);
@@ -34,7 +27,6 @@
       if (darkToggle) darkToggle.textContent = theme === 'dark' ? '☀' : '🌙';
     });
 
-    // keep dark-toggle button in sync (only if it exists)
     if (darkToggle) {
       darkToggle.addEventListener('click', () => {
         const isDark = document.body.classList.contains('dark');
@@ -48,7 +40,6 @@
   });
 })();
 
-// Smooth scroll + scroll-spy for header nav
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.l-header .nav a');
   const nav = document.querySelector('.l-header .nav');
@@ -59,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
     });
-    // close nav when a link is clicked (mobile)
     navLinks.forEach(a => a.addEventListener('click', () => { if (nav.classList.contains('open')) nav.classList.remove('open'); }));
   }
   const sections = [];
@@ -70,15 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) {
         sections.push({ id: href, el: target, link });
 
-        // smooth scroll on click (compute target position at click time)
         link.addEventListener('click', (e) => {
           e.preventDefault();
           const t = document.querySelector(href);
           if (!t) return;
-          // compute header height dynamically to support mobile/desktop
           const header = document.querySelector('.l-header');
-          const headerHeight = header ? header.getBoundingClientRect().height + 12 : 88; // fallback
-          const top = t.getBoundingClientRect().top + window.scrollY - headerHeight; // account for header
+          const headerHeight = header ? header.getBoundingClientRect().height + 12 : 88;
+          const top = t.getBoundingClientRect().top + window.scrollY - headerHeight;
           window.scrollTo({ top, behavior: 'smooth' });
         });
       }
@@ -100,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.45 });
 
   sections.forEach(s => {
-    // ensure section has an id
     if (!s.el.id) s.el.id = s.id.replace('#','');
     obs.observe(s.el);
   });
@@ -120,9 +107,9 @@ function showToast(message) {
 function openLink(url, platform) {
   if (confirm(`You will be redirected to ${platform}. Do you want to continue?`)) {
     if (url.startsWith("mailto:") || url.startsWith("tel:") || url.includes("wa.me")) {
-      window.location.href = url; // يفتح البريد أو الواتساب مباشرة
+      window.location.href = url; 
     } else {
-      window.open(url, '_blank', 'noopener,noreferrer'); // يفتح الروابط الأخرى في نافذة جديدة
+      window.open(url, '_blank', 'noopener,noreferrer'); 
     }
   }
 }
@@ -224,31 +211,28 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 })();
 
-// Counter Logic
 document.addEventListener('DOMContentLoaded', () => {
   const projectsCount = document.getElementById('projects-count');
   const certificatesCount = document.getElementById('certificates-count');
   const experienceCount = document.getElementById('experience-count');
 
-  // حساب عدد المشاريع بناءً على عدد البطاقات داخل قسم My Projects فقط
   const projects = document.querySelectorAll('section[data-aos="fade-up"]#projects .grid .card').length; 
-  const certificates = document.querySelectorAll('.cert-marquee img').length / 2; // عدد الشهادات
-  const experience = "Beginners"; // تغيير النص إلى "Beginners"
+  const certificates = document.querySelectorAll('.cert-marquee img').length / 2;
+  const experience = "Beginners";
 
   let count = 0;
   const interval = setInterval(() => {
-    if (count <= projects) projectsCount.textContent = count; // تحديث عداد المشاريع
+    if (count <= projects) projectsCount.textContent = count;
     if (count <= certificates) certificatesCount.textContent = count;
 
     if (count >= Math.max(projects, certificates)) {
       clearInterval(interval);
-      experienceCount.textContent = experience; // تعيين النص النهائي لـ "Beginners"
+      experienceCount.textContent = experience;
     }
     count++;
   }, 100);
 });
 
-// Back to Top Button Logic
 const backToTop = document.getElementById('back-to-top');
 if (backToTop) {
   window.addEventListener('scroll', () => {
