@@ -1,284 +1,1034 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Nady Emad - Cyber Security Student">
-  <meta name="keywords" content="Nady Emad, CV, Cyber Security, Networking, Portfolio">
-  <title>Nady Emad</title>
-  <link rel="icon" href="./icon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
+  <meta name="description" content="Nady Emad is a Networks and Cyber Security student at SUT University showcasing cybersecurity projects, certificates, technical skills, and recruiter-ready digital presentation.">
+  <meta name="keywords" content="Nady Emad, Cybersecurity Portfolio, Secure Front-End Engineer, Digital Profile, Networks and Cyber Security">
+  <meta name="theme-color" content="#07111f">
+  <title>Nady Emad | Cybersecurity Portfolio</title>
+  <link rel="icon" href="icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-<body class="dark">
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="l-header" role="banner">
-    <div class="l-header-inner">
-      <div class="header-left">
-        <div class="brand">Nady <span class="brand-accent">Emad</span></div>
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider">
-            <span class="icon icon-sun" aria-hidden>☀</span>
-            <span class="icon icon-moon" aria-hidden>🌙</span>
-          </span>
-        </label>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      </div>
-      <nav class="nav" role="navigation" aria-label="Main Navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#projects">Work</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact-form">Send Me</a>
+  <header class="site-header" id="top">
+    <div class="container header-bar">
+      <a class="brand" href="#hero" aria-label="Go to home section">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Nady Emad</strong>
+          <small>Cybersecurity Portfolio</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="#hero">Home</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="nav-link" href="#send-message">Send Me</a></li>
+        </ul>
       </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+          <span class="theme-toggle__indicator" aria-hidden="true"></span>
+          <span class="theme-toggle__text">Dark</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section id="home" class="hero">
-    <div>
-      <div class="profile-image">
-        <img src="profile.jpg" alt="Profile picture of Nady Emad - Cyber Security Student" loading="lazy">
+  <main id="main-content">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Cybersecurity portfolio / digital profile</p>
+          <h1 id="hero-title">Nady Emad</h1>
+          <p class="hero-subtitle">Student - Networks and Cyber Security, SUT University</p>
+          <p class="hero-description">
+            I specialize in network security, penetration testing, and vulnerability assessment while building modern,
+            responsive, and security-aware digital experiences. This portfolio is designed to present my projects,
+            certificates, technical growth, and recruiter-ready profile in one premium experience.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Contact Me</a>
+            <a class="button button-secondary" href="#projects">View Projects</a>
+          </div>
+
+          <ul class="hero-stats" aria-label="Key portfolio highlights">
+            <li>
+              <strong data-countup="13" data-countup-source="projects">0</strong>
+              <span>Featured repositories</span>
+            </li>
+            <li>
+              <strong data-countup="10" data-countup-source="certificates">0</strong>
+              <span>Certificates and badges</span>
+            </li>
+            <li>
+              <strong>Open</strong>
+              <span>For internships and serious collaboration</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <article class="identity-card" aria-label="Professional profile card">
+            <div class="identity-header">
+              <span class="status-pill">Recruiter-ready profile</span>
+              <span class="status-indicator">Dark mode active</span>
+            </div>
+
+            <div class="identity-profile">
+              <div class="profile-ring">
+                <img
+                  class="profile-shot"
+                  src="profile.png"
+                  alt="Portrait of Nady Emad"
+                  width="720"
+                  height="720"
+                  fetchpriority="high"
+                  decoding="async"
+                >
+              </div>
+
+              <div class="identity-copy">
+                <h2>Nady Emad</h2>
+                <p>Networks and Cyber Security Student at SUT University</p>
+              </div>
+            </div>
+
+            <div class="terminal-card" aria-label="Focus areas">
+              <p class="terminal-command"><span>$</span> whoami --focus</p>
+              <ul class="signal-list">
+                <li>Network security and vulnerability assessment</li>
+                <li>Penetration testing fundamentals and security thinking</li>
+                <li>Responsive web applications with clean UX</li>
+                <li>Continuous learning across modern technologies and threats</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
-      <h1><span class="blur-text" data-animate-by="words" data-delay="150" data-direction="top" data-step-duration="0.35">Nady Emad</span></h1>
-      <p class="subtitle"><span class="blur-text" data-animate-by="words" data-delay="150" data-direction="top" data-step-duration="0.35">Student - Networks and Cyber Security, SUT University</span></p>
-      <a href="#contact" class="cta-button">Contact Me</a>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">About</p>
+        <h2 id="about-title">A cybersecurity-focused student profile built to communicate trust, technical depth, and growth.</h2>
+        <p>
+          I am passionate about protecting systems and data from cyber threats while continuing to sharpen both my
+          engineering execution and my ability to present work clearly to recruiters, teams, and collaborators.
+        </p>
+      </div>
+
+      <div class="container about-grid about-grid--three">
+        <article class="glass-card reveal">
+          <span class="card-eyebrow">Cyber Security</span>
+          <h3>Security-driven learning path</h3>
+          <p>
+            I specialize in network security, penetration testing, and vulnerability assessment, with a strong interest
+            in defensive thinking, safer systems, and practical cybersecurity workflows.
+          </p>
+        </article>
+
+        <article class="glass-card reveal">
+          <span class="card-eyebrow">Web Development</span>
+          <h3>Secure and responsive interfaces</h3>
+          <p>
+            I build responsive, secure, and high-performance web applications using modern technologies, focusing on
+            usability, accessibility, and clean front-end architecture.
+          </p>
+        </article>
+
+        <article class="glass-card reveal">
+          <span class="card-eyebrow">Education</span>
+          <h3>SUT University</h3>
+          <p>
+            I am currently a student at SUT University majoring in Networks and Cyber Security, and I continuously
+            learn to stay updated with the latest technology and security trends.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">Skills</p>
+        <h2>Technical skills organized into practical categories for fast recruiter scanning.</h2>
+        <p>
+          This section highlights the technologies, security topics, and systems knowledge I am actively building
+          through projects, labs, coursework, and continuous hands-on learning.
+        </p>
+      </div>
+
+      <div class="container skills-grid">
+        <article class="meter-card reveal">
+          <div class="meter-head">
+            <h3>Programming and Development</h3>
+            <span>Core</span>
+          </div>
+          <div class="meter"><span style="--level: 90%;"></span></div>
+          <p>Python, Java, JavaScript, HTML, CSS, SQL, and Laravel for secure, maintainable, and responsive application building.</p>
+        </article>
+
+        <article class="meter-card reveal">
+          <div class="meter-head">
+            <h3>Cybersecurity and Networks</h3>
+            <span>Focus</span>
+          </div>
+          <div class="meter"><span style="--level: 88%;"></span></div>
+          <p>Network Security, Web and Security Technologies, penetration testing foundations, and vulnerability-aware thinking.</p>
+        </article>
+
+        <article class="meter-card reveal">
+          <div class="meter-head">
+            <h3>Systems and Command Line</h3>
+            <span>Practice</span>
+          </div>
+          <div class="meter"><span style="--level: 84%;"></span></div>
+          <p>Linux, Linux and Shell Programming, Git workflows, and system-oriented tooling for technical productivity.</p>
+        </article>
+
+        <article class="meter-card reveal">
+          <div class="meter-head">
+            <h3>Analysis and Investigation</h3>
+            <span>Growth</span>
+          </div>
+          <div class="meter"><span style="--level: 80%;"></span></div>
+          <p>Digital Forensics, secure analysis habits, and applied learning across academic security exercises and labs.</p>
+        </article>
+      </div>
+
+      <div class="container tool-cloud reveal">
+        <h3>Core stack and learning areas</h3>
+        <ul class="tag-list" aria-label="Core tools and technologies">
+          <li>Python</li>
+          <li>Linux</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Network Security</li>
+          <li>Git</li>
+          <li>SQL</li>
+          <li>Laravel</li>
+          <li>Web and Security Technologies</li>
+          <li>Digital Forensics</li>
+          <li>Linux and Shell Programming</li>
+          <li>Penetration Testing</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">Projects</p>
+        <h2>Security-focused projects first, followed by web, academic, and desktop work that shows steady technical growth.</h2>
+        <p>
+          Every repository includes a category, concise technical summary, and direct GitHub access so recruiters can
+          scan fast, open code instantly, and understand where my strongest cybersecurity work stands out.
+        </p>
+      </div>
+
+      <div class="container project-toolbar reveal">
+        <div class="filter-group" role="toolbar" aria-label="Filter projects">
+          <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+          <button class="filter-chip" type="button" data-filter="security">Security</button>
+          <button class="filter-chip" type="button" data-filter="web">Web</button>
+          <button class="filter-chip" type="button" data-filter="desktop">Desktop</button>
+          <button class="filter-chip" type="button" data-filter="academic">Academic</button>
+          <button class="filter-chip" type="button" data-filter="collaboration">Collaboration</button>
+        </div>
+      </div>
+
+      <div class="container project-grid">
+        <article class="project-card project-card--featured reveal" data-project-card data-category="security desktop">
+          <div class="project-meta">
+            <span class="project-category">Security</span>
+            <span class="project-index">01</span>
+          </div>
+          <h3>RansomShield</h3>
+          <p>Production-ready ransomware detection suite combining file behavior analysis, CPU and IO monitoring, and command-line threat detection with intelligent threat scoring and 97%+ detection accuracy.</p>
+          <ul class="mini-tags">
+            <li>Threat Detection</li>
+            <li>Python</li>
+            <li>Security Tooling</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/RansomShield" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="security desktop">
+          <div class="project-meta">
+            <span class="project-category">Security</span>
+            <span class="project-index">02</span>
+          </div>
+          <h3>CipherForge Suite</h3>
+          <p>Professional Python encryption toolkit featuring classical ciphers and AES-256-GCM encryption with a modern PyQt5 GUI.</p>
+          <ul class="mini-tags">
+            <li>Encryption</li>
+            <li>PyQt5</li>
+            <li>AES-256-GCM</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/CipherForge-Suite" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="security academic web">
+          <div class="project-meta">
+            <span class="project-category">Security</span>
+            <span class="project-index">03</span>
+          </div>
+          <h3>WebSec_240102590</h3>
+          <p>Web security-related academic and practical project demonstrating secure web concepts, hands-on implementation, and safer application thinking.</p>
+          <ul class="mini-tags">
+            <li>Web Security</li>
+            <li>Academic</li>
+            <li>Secure Concepts</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/WebSec_240102590" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="security academic web">
+          <div class="project-meta">
+            <span class="project-category">Security</span>
+            <span class="project-index">04</span>
+          </div>
+          <h3>UniShield</h3>
+          <p>Security-focused university project presented as a modern defensive concept built around safer campus workflows, protective access logic, and cybersecurity-minded design.</p>
+          <ul class="mini-tags">
+            <li>Defensive Concept</li>
+            <li>Campus Security</li>
+            <li>Academic</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/UniShield" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="desktop">
+          <div class="project-meta">
+            <span class="project-category">Desktop</span>
+            <span class="project-index">05</span>
+          </div>
+          <h3>ZIP Archive Manager</h3>
+          <p>Advanced ZIP archive manager with GUI and CLI support, password protection, batch operations, compression analysis, and Python/PyQt5 implementation.</p>
+          <ul class="mini-tags">
+            <li>GUI + CLI</li>
+            <li>PyQt5</li>
+            <li>Utilities</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/ZIP-Archive-Manager" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="web">
+          <div class="project-meta">
+            <span class="project-category">Portfolio</span>
+            <span class="project-index">06</span>
+          </div>
+          <h3>Digital Profile</h3>
+          <p>Personal portfolio website and digital profile showcasing my background, certificates, skills, and work in cybersecurity and development.</p>
+          <ul class="mini-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/myproject" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="academic web">
+          <div class="project-meta">
+            <span class="project-category">Academic</span>
+            <span class="project-index">07</span>
+          </div>
+          <h3>University System</h3>
+          <p>University-related system project demonstrating software design, structure, and application workflow in an academic context.</p>
+          <ul class="mini-tags">
+            <li>System Design</li>
+            <li>Workflow</li>
+            <li>Web App</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/University-System" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="web academic">
+          <div class="project-meta">
+            <span class="project-category">Web</span>
+            <span class="project-index">08</span>
+          </div>
+          <h3>CarRentalSystem</h3>
+          <p>Car rental system project demonstrating business logic, application workflow, and software engineering fundamentals.</p>
+          <ul class="mini-tags">
+            <li>Business Logic</li>
+            <li>System Workflow</li>
+            <li>Academic</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/CarRentalSystem" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="web academic">
+          <div class="project-meta">
+            <span class="project-category">Labs</span>
+            <span class="project-index">09</span>
+          </div>
+          <h3>FullStack-WebLabs-2025</h3>
+          <p>Full-stack lab work and hands-on web exercises demonstrating learning progress, implementation skills, and practical experimentation.</p>
+          <ul class="mini-tags">
+            <li>Full Stack</li>
+            <li>Labs</li>
+            <li>Learning</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/FullStack-WebLabs-2025" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="collaboration web">
+          <div class="project-meta">
+            <span class="project-category">Collaboration</span>
+            <span class="project-index">10</span>
+          </div>
+          <h3>AURVEX</h3>
+          <p>Collaborative project repository presented as a team-based technical build, clearly reflecting shared implementation and cooperation in delivery.</p>
+          <ul class="mini-tags">
+            <li>Team Project</li>
+            <li>Collaboration</li>
+            <li>Technical Build</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/KirolosArian/AURVEX" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-project-card data-category="web">
+          <div class="project-meta">
+            <span class="project-category">Branding</span>
+            <span class="project-index">11</span>
+          </div>
+          <h3>Nady-Emad Profile Repository</h3>
+          <p>GitHub profile repository representing personal branding, developer identity, and public profile presentation.</p>
+          <ul class="mini-tags">
+            <li>Profile README</li>
+            <li>Branding</li>
+            <li>Identity</li>
+          </ul>
+          <div class="project-actions">
+            <a class="button button-primary small" href="https://github.com/Nady-Emad/Nady-Emad" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+            <a class="button button-ghost small" href="#contact">Discuss Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="certificates">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">Certificates</p>
+        <h2>A premium certificate showcase with organized assets, sharper hierarchy, and full-screen preview support.</h2>
+        <p>
+          Every certificate and badge is now loaded from a cleaner naming system inside <code>certificates/</code>,
+          displayed in professional cards, and opened through a polished lightbox instead of raw file navigation.
+        </p>
+      </div>
+
+      <div class="container certificate-grid" tabindex="0" aria-label="Certificates showcase">
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-network-fundamentals.jpg"
+            data-lightbox-title="Computer Network Fundamentals"
+            data-lightbox-alt="Computer Network Fundamentals course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-network-fundamentals.jpg"
+              alt="Computer Network Fundamentals course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Networking</span>
+            <h3>Computer Network Fundamentals</h3>
+            <p>Foundational networking certificate covering essential infrastructure concepts, protocol awareness, and core terminology.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-network-fundamentals.jpg"
+              data-lightbox-title="Computer Network Fundamentals"
+              data-lightbox-alt="Computer Network Fundamentals course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-ethical-hacking.jpg"
+            data-lightbox-title="Ethical Hacking"
+            data-lightbox-alt="Ethical Hacking course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-ethical-hacking.jpg"
+              alt="Ethical Hacking course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Security</span>
+            <h3>Ethical Hacking</h3>
+            <p>Credential highlighting attacker-mindset awareness, responsible testing principles, and offensive-security fundamentals.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-ethical-hacking.jpg"
+              data-lightbox-title="Ethical Hacking"
+              data-lightbox-alt="Ethical Hacking course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-network-security.jpg"
+            data-lightbox-title="Introduction to Network Security"
+            data-lightbox-alt="Introduction to Network Security course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-network-security.jpg"
+              alt="Introduction to Network Security course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Security</span>
+            <h3>Introduction to Network Security</h3>
+            <p>Network security fundamentals focused on secure communication, risk awareness, and protection-first thinking.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-network-security.jpg"
+              data-lightbox-title="Introduction to Network Security"
+              data-lightbox-alt="Introduction to Network Security course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-cybersecurity-for-all.jpg"
+            data-lightbox-title="Cybersecurity For All"
+            data-lightbox-alt="Cybersecurity For All course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-cybersecurity-for-all.jpg"
+              alt="Cybersecurity For All course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Awareness</span>
+            <h3>Cybersecurity For All</h3>
+            <p>Awareness-driven certificate reinforcing cyber hygiene, digital safety habits, and security literacy for broader audiences.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-cybersecurity-for-all.jpg"
+              data-lightbox-title="Cybersecurity For All"
+              data-lightbox-alt="Cybersecurity For All course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-cyber-threat-management.jpg"
+            data-lightbox-title="Cyber Threat Management"
+            data-lightbox-alt="Cyber Threat Management course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-cyber-threat-management.jpg"
+              alt="Cyber Threat Management course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Threat Analysis</span>
+            <h3>Cyber Threat Management</h3>
+            <p>Formal completion of threat analysis training focused on risk evaluation, incident response thinking, and vulnerability handling.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-cyber-threat-management.jpg"
+              data-lightbox-title="Cyber Threat Management"
+              data-lightbox-alt="Cyber Threat Management course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-cisco-packet-tracer.jpg"
+            data-lightbox-title="Getting Started with Cisco Packet Tracer"
+            data-lightbox-alt="Getting Started with Cisco Packet Tracer course completion certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-cisco-packet-tracer.jpg"
+              alt="Getting Started with Cisco Packet Tracer course completion certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Cisco</span>
+            <h3>Getting Started with Cisco Packet Tracer</h3>
+            <p>Cisco-backed training focused on simulation-driven networking practice and hands-on lab readiness.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-cisco-packet-tracer.jpg"
+              data-lightbox-title="Getting Started with Cisco Packet Tracer"
+              data-lightbox-alt="Getting Started with Cisco Packet Tracer course completion certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/cert-cyberx-summit.jpg"
+            data-lightbox-title="CyberX Summit and Awards 2025"
+            data-lightbox-alt="CyberX Summit and Awards 2025 attendance certificate"
+          >
+            <span class="preview-badge">Certificate</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/cert-cyberx-summit.jpg"
+              alt="CyberX Summit and Awards 2025 attendance certificate"
+              width="1600"
+              height="900"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Event</span>
+            <h3>CyberX Summit and Awards 2025</h3>
+            <p>Event participation certificate reflecting continued engagement with the cybersecurity community and industry learning.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/cert-cyberx-summit.jpg"
+              data-lightbox-title="CyberX Summit and Awards 2025"
+              data-lightbox-alt="CyberX Summit and Awards 2025 attendance certificate"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card badge-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/badge-network-fundamentals.png"
+            data-lightbox-title="Network Fundamentals Badge"
+            data-lightbox-alt="Computer Network Fundamentals course badge"
+          >
+            <span class="preview-badge">Badge</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/badge-network-fundamentals.png"
+              alt="Computer Network Fundamentals course badge"
+              width="1024"
+              height="1024"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Badge</span>
+            <h3>Computer Network Fundamentals Badge</h3>
+            <p>Digital badge validating foundational networking coursework and certification completion.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/badge-network-fundamentals.png"
+              data-lightbox-title="Network Fundamentals Badge"
+              data-lightbox-alt="Computer Network Fundamentals course badge"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card badge-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/badge-ethical-hacking.png"
+            data-lightbox-title="Ethical Hacking Badge"
+            data-lightbox-alt="Ethical Hacking course badge"
+          >
+            <span class="preview-badge">Badge</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/badge-ethical-hacking.png"
+              alt="Ethical Hacking course badge"
+              width="1024"
+              height="1024"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Badge</span>
+            <h3>Ethical Hacking Badge</h3>
+            <p>Digital badge representing successful completion of ethical hacking fundamentals within the cybersecurity track.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/badge-ethical-hacking.png"
+              data-lightbox-title="Ethical Hacking Badge"
+              data-lightbox-alt="Ethical Hacking course badge"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+
+        <article class="certificate-card badge-card reveal">
+          <button
+            class="certificate-preview"
+            type="button"
+            data-lightbox-trigger
+            data-lightbox-src="certificates/badge-network-security.png"
+            data-lightbox-title="Network Security Badge"
+            data-lightbox-alt="Introduction to Network Security course badge"
+          >
+            <span class="preview-badge">Badge</span>
+            <img
+              class="lazy-media"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+              data-src="certificates/badge-network-security.png"
+              alt="Introduction to Network Security course badge"
+              width="1024"
+              height="1024"
+              decoding="async"
+              loading="lazy"
+            >
+          </button>
+          <div class="certificate-body">
+            <span class="certificate-tag">Badge</span>
+            <h3>Introduction to Network Security Badge</h3>
+            <p>Recognition badge reinforcing secure-networking knowledge and completion of the introductory security course.</p>
+            <button
+              class="button button-ghost small"
+              type="button"
+              data-lightbox-trigger
+              data-lightbox-src="certificates/badge-network-security.png"
+              data-lightbox-title="Network Security Badge"
+              data-lightbox-alt="Introduction to Network Security course badge"
+            >
+              View Certificate
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section achievements-section" id="achievements" aria-labelledby="achievements-title">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">Achievements</p>
+        <h2 id="achievements-title">Clear numbers that support the story behind the portfolio.</h2>
+        <p>
+          These highlights summarize active project work, certificate progress, and the practical learning path shaping
+          my cybersecurity profile.
+        </p>
+      </div>
+
+      <div class="container achievements-grid">
+        <article class="glass-card stat-card reveal">
+          <span class="card-eyebrow">Completed Projects</span>
+          <strong class="stat-card__value" data-countup="13" data-countup-source="projects">0</strong>
+          <p>Repositories showcased across cybersecurity, desktop utilities, web systems, and academic work.</p>
+        </article>
+
+        <article class="glass-card stat-card reveal">
+          <span class="card-eyebrow">Certificates</span>
+          <strong class="stat-card__value" data-countup="10" data-countup-source="certificates">0</strong>
+          <p>Certificates and badges highlighting cybersecurity, networking, Cisco practice, and event participation.</p>
+        </article>
+
+        <article class="glass-card stat-card reveal">
+          <span class="card-eyebrow">Experience Level</span>
+          <strong class="stat-card__value">Student</strong>
+          <p>Focused on networks and cybersecurity with a strong commitment to continuous learning and technical growth.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container section-heading reveal">
+        <p class="section-kicker">Contact</p>
+        <h2 id="contact-title">Reach me through the platforms recruiters and collaborators use most.</h2>
+        <p>
+          Every contact channel below is presented as a fast-action card with safe external linking, smooth feedback,
+          and a cleaner communication flow.
+        </p>
+      </div>
+
+      <div class="container contact-layout">
+        <div class="contact-copy reveal">
+          <div class="availability-card">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Available for internships, entry-level opportunities, portfolio reviews, and project discussions.
+          </div>
+
+          <div class="contact-actions">
+            <button class="button button-primary small" id="copy-email" type="button" data-email="nady240102590@sut.edu.eg">Copy Email</button>
+            <button class="button button-secondary small" type="button" data-open-link="mailto:nady240102590@sut.edu.eg" data-link-label="email client">Send Email</button>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="https://github.com/Nady-Emad" target="_blank" rel="noopener noreferrer" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">GH</span>
+            <span class="contact-label">GitHub</span>
+            <strong>Nady-Emad</strong>
+            <p>Explore repositories, security projects, and continuous technical work.</p>
+          </a>
+
+          <a class="contact-card reveal" href="https://www.linkedin.com/in/nadyemad/" target="_blank" rel="noopener noreferrer" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">in</span>
+            <span class="contact-label">LinkedIn</span>
+            <strong>Professional Profile</strong>
+            <p>Best place for recruiters, networking, and professional opportunities.</p>
+          </a>
+
+          <a class="contact-card reveal" href="https://www.instagram.com/nady.emad.nady/" target="_blank" rel="noopener noreferrer" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">IG</span>
+            <span class="contact-label">Instagram</span>
+            <strong>@nady.emad.nady</strong>
+            <p>Social presence and personal digital identity.</p>
+          </a>
+
+          <a class="contact-card reveal" href="https://wa.me/201205855148" target="_blank" rel="noopener noreferrer" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">WA</span>
+            <span class="contact-label">WhatsApp</span>
+            <strong>+20 120 585 5148</strong>
+            <p>Fast communication for follow-up, opportunities, and direct messages.</p>
+          </a>
+
+          <a class="contact-card reveal" href="https://www.facebook.com/nady.emad.75/" target="_blank" rel="noopener noreferrer" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">FB</span>
+            <span class="contact-label">Facebook</span>
+            <strong>Nady Emad</strong>
+            <p>Additional contact channel for direct connection and outreach.</p>
+          </a>
+
+          <a class="contact-card reveal" href="mailto:nady240102590@sut.edu.eg" data-contact-link>
+            <span class="contact-icon" aria-hidden="true">@</span>
+            <span class="contact-label">Email</span>
+            <strong>nady240102590@sut.edu.eg</strong>
+            <p>Direct contact for internships, interviews, collaboration, and portfolio reviews.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section form-section" id="send-message" aria-labelledby="send-message-title">
+      <div class="container form-layout">
+        <div class="section-heading reveal form-copy">
+          <p class="section-kicker">Send Me</p>
+          <h2 id="send-message-title">Send a structured message directly from the portfolio.</h2>
+          <p>
+            The form is designed for quick recruiter outreach, project inquiries, and professional introductions with
+            clean validation and mail client handoff.
+          </p>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contact-form" action="mailto:nady240102590@sut.edu.eg" method="post" enctype="text/plain" novalidate>
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" id="contact-name" placeholder="Your name" autocomplete="name" required>
+            </label>
+
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" id="contact-email" placeholder="your@email.com" autocomplete="email" required>
+            </label>
+
+            <label class="form-field form-field--full">
+              <span>Subject</span>
+              <input type="text" name="subject" id="contact-subject" placeholder="Opportunity, project, or question" required>
+            </label>
+
+            <label class="form-field form-field--full">
+              <span>Message</span>
+              <textarea name="message" id="contact-message" rows="6" placeholder="Write your message here..." required></textarea>
+            </label>
+          </div>
+
+          <div class="contact-actions">
+            <button class="button button-primary" type="submit">Send Message</button>
+            <p class="form-note">Messages open in your email client and target <strong>nady240102590@sut.edu.eg</strong>.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-copy">
+        <p>&copy; 2025 Nady Emad. All rights reserved.</p>
+        <p>Designed with love to support dark mode.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="https://github.com/Nady-Emad" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="myproject/404.html">Friendly 404 page</a>
+      </div>
     </div>
-  </section>
-
-  <section id="about" class="section" data-aos="fade-up">
-    <h2 class="section-title">About Me</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cyber Security</h3>
-        <p>I specialize in network security, penetration testing, and vulnerability assessment. I am passionate about protecting systems and data from cyber threats.</p>
-      </div>
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>I build responsive, secure, and high-performance web applications using modern technologies. I enjoy creating user-friendly and visually appealing designs.</p>
-      </div>
-      <div class="card">
-        <h3>Education</h3>
-        <p>I am currently a student at SUT University, majoring in Networks and Cyber Security. I am constantly learning and improving my skills to stay updated with the latest trends in technology.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="skills" data-aos="fade-up">
-    <h2 class="section-title">My Technical Skills</h2>
-    <p class="section-subtitle">I have expertise in a wide range of technologies and tools.</p>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Python</h3>
-        <span class="skill-tag">programming</span>
-      </div>
-      <div class="skill-card">
-        <h3>Linux</h3>
-        <span class="skill-tag">os</span>
-      </div>
-      <div class="skill-card">
-        <h3>Java</h3>
-        <span class="skill-tag">programming</span>
-      </div>
-      <div class="skill-card">
-        <h3>JavaScript</h3>
-        <span class="skill-tag">programming</span>
-      </div>
-      <div class="skill-card">
-        <h3>HTML</h3>
-        <span class="skill-tag">frontend</span>
-      </div>
-      <div class="skill-card">
-        <h3>CSS</h3>
-        <span class="skill-tag">frontend</span>
-      </div>
-      <div class="skill-card">
-        <h3>Network Security</h3>
-        <span class="skill-tag">security</span>
-      </div>
-      <div class="skill-card">
-        <h3>Git</h3>
-        <span class="skill-tag">tools</span>
-      </div>
-      <div class="skill-card">
-        <h3>SQL</h3>
-        <span class="skill-tag">database</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="certificates" class="section" data-aos="fade-up">
-    <h2 class="section-title">📜 My Certificates</h2>
-    <div class="cert-marquee">
-      <div class="cert-track">
-        <img src="certificates/Course_Certificate_Ar-1.png" alt="Cyber Security Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_Ar_2-1.png" alt="Another Cyber Security Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_En-1.png" alt="Cyber Security Certificate in English" loading="lazy">
-        <img src="certificates/Course_Certificate_En_2-1.png" alt="Another Cyber Security Certificate in English" loading="lazy">
-        <img src="certificates/Nady%20Emad%20Nady%20Poles-.png" alt="Nady Emad Nady Poles Certificate" loading="lazy">
-        <img src="certificates/Computer_Network_Fundamentals.png" alt="Computer Network Fundamentals Certificate" loading="lazy">
-        <img src="certificates/Course_Certificate_Ar%D8%A7%D9%84%D8%A5%D8%AE%D8%AA%D8%B1%D8%A7%D9%82%20%D8%A7%D9%84%D8%A3%D8%AE%D9%84%D8%A7%D9%82%D9%8A.png" alt="Ethical Hacking Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_En%D8%A7%D9%84%D8%A5%D8%AE%D8%AA%D8%B1%D8%A7%D9%82%20%D8%A7%D9%84%D8%A3%D8%AE%D9%84%D8%A7%D9%82%D9%8A.png" alt="Ethical Hacking Certificate in English" loading="lazy">
-        <img src="certificates/Ethical_Hacking.png" alt="Ethical Hacking Certificate" loading="lazy">
-        <img src="certificates/Introduction_to_Network_Security.png" alt="Introduction to Network Security Certificate" loading="lazy">
-        <img src="certificates/%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D8%AC%D9%85%D9%8A%D8%B9.png" alt="Cyber Awareness for Everyone Certificate" loading="lazy">
-        <img src="certificates/Getting_Started_with_Cisco_Packet_Tracer_certificate_nady240102590-sut-edu-eg_5f00d436-992b-493b-8c57-09b6f426c834-1.png" alt="Getting Started with Cisco Packet Tracer Certificate" loading="lazy">
-        <img src="certificates/Cyber_Threat_Management_certificate_nady240102590-sut-edu-eg_0f5af75f-a0cb-4910-abf3-b4bf84423458-1.png" alt="Cyber Threat Management Certificate" loading="lazy">
-        <img src="certificates/1763820901693-1.png" alt="Professional Certificate" loading="lazy">
-        <img src="certificates/Course_Certificate_Ar-1.png" alt="Cyber Security Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_Ar_2-1.png" alt="Another Cyber Security Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_En-1.png" alt="Cyber Security Certificate in English" loading="lazy">
-        <img src="certificates/Course_Certificate_En_2-1.png" alt="Another Cyber Security Certificate in English" loading="lazy">
-        <img src="certificates/Nady%20Emad%20Nady%20Poles-.png" alt="Nady Emad Nady Poles Certificate" loading="lazy">
-        <img src="certificates/Computer_Network_Fundamentals.png" alt="Computer Network Fundamentals Certificate" loading="lazy">
-        <img src="certificates/Course_Certificate_Ar%D8%A7%D9%84%D8%A5%D8%AE%D8%AA%D8%B1%D8%A7%D9%82%20%D8%A7%D9%84%D8%A3%D8%AE%D9%84%D8%A7%D9%82%D9%8A.png" alt="Ethical Hacking Certificate in Arabic" loading="lazy">
-        <img src="certificates/Course_Certificate_En%D8%A7%D9%84%D8%A5%D8%AE%D8%AA%D8%B1%D8%A7%D9%82%20%D8%A7%D9%84%D8%A3%D8%AE%D9%84%D8%A7%D9%82%D9%8A.png" alt="Ethical Hacking Certificate in English" loading="lazy">
-        <img src="certificates/Ethical_Hacking.png" alt="Ethical Hacking Certificate" loading="lazy">
-        <img src="certificates/Introduction_to_Network_Security.png" alt="Introduction to Network Security Certificate" loading="lazy">
-        <img src="certificates/%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D8%AC%D9%85%D9%8A%D8%B9.png" alt="Cyber Awareness for Everyone Certificate" loading="lazy">
-        <img src="certificates/Getting_Started_with_Cisco_Packet_Tracer_certificate_nady240102590-sut-edu-eg_5f00d436-992b-493b-8c57-09b6f426c834-1.png" alt="Getting Started with Cisco Packet Tracer Certificate" loading="lazy">
-        <img src="certificates/Cyber_Threat_Management_certificate_nady240102590-sut-edu-eg_0f5af75f-a0cb-4910-abf3-b4bf84423458-1.png" alt="Cyber Threat Management Certificate" loading="lazy">
-        <img src="certificates/1763820901693-1.png" alt="Professional Certificate" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="projects" data-aos="fade-up">
-    <h2 class="section-title">My Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Digital Profile</h3>
-        <p>An online resume designed to provide a detailed look into my professional journey. The site serves as a central hub for my certificates, projects, and a clear breakdown of technical competencies, including HTML, CSS, and Linux, to potential employers.</p>
-        <a href="https://github.com/Nady-Emad/myproject" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h3>ZIP Archive Manager v3.2</h3>
-        <p>Advanced ZIP Archive Manager - Create, extract, and manage ZIP files with ease. Features GUI & CLI, password protection, batch operations, and compression analysis. Built with Python & PyQt5. Standalone v3.2.exe available.</p>
-        <a href="https://github.com/Nady-Emad/ZIP-Archive-Manager" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h3>RansomShield</h3>
-        <p>Production-ready ransomware detection suite combining file behavior analysis, CPU/IO monitoring, and command-line threat detection. Delivers 97%+ detection accuracy with intelligent threat scoring and minimal system overhead.</p>
-        <a href="https://github.com/Nady-Emad/RansomShield" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-      </div>
-      <div class="card">
-        <h3>CipherForge Suite</h3>
-        <p>A professional Python encryption toolkit featuring classical ciphers and AES-256-GCM encryption with modern PyQt5 GUI interface.</p>
-        <a href="https://github.com/Nady-Emad/CipherForge-Suite" target="_blank" rel="noopener" class="project-link">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="counter" data-aos="fade-up">
-    <h2 class="section-title">Achievements</h2>
-    <div class="grid">
-      <div class="card">
-        <h3 id="projects-count">0</h3>
-        <p>Completed Projects</p>
-      </div>
-      <div class="card">
-        <h3 id="certificates-count">0</h3>
-        <p>Certificates</p>
-      </div>
-      <div class="card">
-        <h3 id="experience-count">Beginners</h3>
-        <p>Experience Level</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero" id="contact">
-    <div class="section">
-      <h2 class="section-title contact-title">Contact Information</h2>
-      <div class="grid">
-        <div class="contact-item" onclick="openLink('https://github.com/Nady-Emad', 'GitHub')">
-          <img class="contact-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1200px-GitHub_Invertocat_Logo.svg.png" alt="GitHub Profile">
-          <span>GitHub</span>
-        </div>
-        <div class="contact-item" onclick="openLink('https://www.linkedin.com/in/nadyemad/', 'LinkedIn')">
-          <img class="contact-icon" src="https://images.icon-icons.com/70/PNG/512/linkedin_14170.png" alt="LinkedIn Profile">
-          <span>LinkedIn</span>
-        </div>
-        <div class="contact-item" onclick="openLink('https://www.instagram.com/nady.emad.nady/', 'Instagram')">
-          <img class="contact-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Profile">
-          <span>Instagram</span>
-        </div>
-        <div class="contact-item" onclick="openLink('https://wa.me/201205855148', 'WhatsApp')">
-          <img class="contact-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/250px-WhatsApp.svg.png" alt="WhatsApp Contact">
-          <span>WhatsApp</span>
-        </div>
-        <div class="contact-item" onclick="openLink('https://www.facebook.com/nady.emad.75/', 'Facebook')">
-          <img class="contact-icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtfbcYeYgf0wQJ-LSPm3CPbyB7T1p0f5bnaA&s" alt="Facebook Profile">
-          <span>Facebook</span>
-        </div>
-        <div class="contact-item" onclick="openLink('mailto:nady240102590@sut.edu.eg', 'Email')">
-          <img class="contact-icon" src="https://store-images.s-microsoft.com/image/apps.30616.14374512070697751.fcbc53c2-4843-4c59-aa6a-206ec85835b5.915cc067-8e3d-468b-bc6b-37c7c8d35d93" alt="Email Contact">
-          <span>Email</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="contact-form" data-aos="fade-up">
-    <h2 class="section-title">Send Me a Message</h2>
-    <p class="section-subtitle">Fill out the form below and I'll get back to you as soon as possible.</p>
-    <form action="mailto:nady240102590@sut.edu.eg" method="post" enctype="text/plain" class="contact-form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your email" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="cta-button">
-        <span>Send Message</span>
-      </button>
-    </form>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Nady Emad. All rights reserved.</p>
-    <p>Designed with ❤️ to support dark mode.</p>
-    <p class="footer-404"><a href="myproject/404.html">🔒 Friendly 404 — Do Not Enter</a></p>
   </footer>
 
-  <div id="toast" class="toast">Link opened successfully!</div>
+  <div class="certificate-modal" id="certificate-modal" hidden>
+    <div class="certificate-modal__backdrop" data-modal-close></div>
+    <div class="certificate-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="certificate-modal-title">
+      <button class="certificate-modal__close" id="certificate-modal-close" type="button" aria-label="Close certificate preview" data-modal-close>
+        Close
+      </button>
+      <div class="certificate-modal__head">
+        <p class="certificate-modal__eyebrow">Certificate Preview</p>
+        <h3 id="certificate-modal-title">Certificate</h3>
+      </div>
+      <div class="certificate-modal__viewport">
+        <img id="certificate-modal-image" src="" alt="">
+      </div>
+    </div>
+  </div>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
-    <img src="https://cdn-icons-png.flaticon.com/512/10186/10186750.png" alt="Back to top" class="back-to-top-icon">
-  </button>
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">Top</button>
+
   <script src="app.js" defer></script>
-  <script>
-    AOS.init();
-
-    function openLink(url, platform) {
-      if (confirm(`You will be redirected to ${platform}. Do you want to continue?`)) {
-        if (url.startsWith("mailto:") || url.startsWith("tel:") || url.includes("wa.me")) {
-          window.location.href = url; 
-        } else {
-          window.open(url, '_blank', 'noopener,noreferrer');
-        }
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-    });
-  </script>
 </body>
 </html>
