@@ -1,471 +1,265 @@
-# 🛡️ Nady Emad — Personal Portfolio (Digital Profile)
+# Nady Emad | Cybersecurity Portfolio
 
 <div align="center">
-
-### **Protecting Digital Infrastructure | Building Secure Solutions**
-
-> *A Modern Portfolio Showcasing Cybersecurity Expertise, Penetration Testing Skills, and Innovative Security Solutions*
-
+  <strong>Premium personal portfolio and digital profile for a Networks and Cyber Security student at SUT University.</strong>
+  <br>
+  Dark-first UI | Responsive HTML, CSS, and JavaScript | Recruiter-friendly presentation
 </div>
 
 ---
 
-## 📋 Overview
+## Overview
 
-This repository contains the personal portfolio website for **Nady Emad**, a Networks & Cyber Security student at SUT University, Cairo, Egypt. The site is a **small static website** (HTML, CSS, and JavaScript) that presents a comprehensive digital profile, technical skills, certificates, security projects, and contact information with modern animations and dark mode support.
+This repository contains the current version of **Nady Emad's** personal portfolio website.
+It is designed as a premium cybersecurity-themed experience that presents:
 
-**Repository:** [github.com/Nady-Emad](https://github.com/Nady-Emad)
+- personal branding and academic identity
+- technical skills and learning areas
+- security-focused projects and GitHub repositories
+- certificates and badges with image preview
+- achievements, contact channels, and a direct message form
 
----
-
-## ✨ Features
-
-<div align="center">
-
-```
-🎨 MODERN PORTFOLIO WITH SMOOTH ANIMATIONS 🎨
-```
-
-</div>
-
-- 🎯 **Attractive Hero Section** — Profile image with subtle animations and modern design
-- 🎪 **Certificates Carousel** — Marquee-like layout showcasing qualifications and achievements
-- 🌙 **Dark Mode Support** — Toggle between light and dark themes with user preference saved to localStorage
-- ⚡ **Performance Optimized** — Lazy-loaded images and efficient counter animations for better performance
-- 📱 **Responsive Design** — Perfect layout for mobile devices, tablets, and desktop screens
-- 🔐 **Security-Focused** — Clean code with form validation and secure external link handling
-- 🎬 **Smooth Animations** — Blur text animations, scroll effects, and modern UI transitions
-- 📊 **Live Counters** — Animated project and certificate counters with smooth increment
+The site is built as a **static front-end project** using **HTML, CSS, and vanilla JavaScript only**, making it lightweight, fast, and ready for GitHub Pages deployment.
 
 ---
 
-## 👨‍💻 About Me
+## Project Identity
 
-I am a **Networks and Cyber Security student** at **SUT University, Cairo, Egypt**, with a passion for protecting digital infrastructure from cyber threats. With dual expertise in cybersecurity and web development, I create **secure, high-performance applications** while specializing in threat analysis and system protection.
-
-### Core Expertise
-
-| 🔐 Cybersecurity | 🌐 Web Development | 🛠️ Security Tools |
-|:---:|:---:|:---:|
-| Penetration Testing | Responsive Apps | Ransomware Detection |
-| Vulnerability Assessment | Modern Technologies | Encryption Utilities |
-| Threat Detection | User-Friendly Design | Network Analysis |
-
----
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html              # 📄 Main static page (entry point)
-├── style.css               # 🎨 All site styles & animations
-├── app.js                  # ⚙️ JavaScript for interactivity
-├── profile.jpg             # 👤 Profile picture (hero section)
-├── icon.jpg                # 🎯 Site favicon
-├── 404.html                # ⚠️ Custom 404 error page
-├── google87c5824a39e30af8  # 🔍 Google Search Console verification
-├── certificates/           # 📜 Certificate images & PDFs folder
-├── package.json            # 📦 Project dependencies
-├── package-lock.json       # 🔒 Dependency lock file
-└── README.md               # 📖 This file
-```
-
-### File Descriptions
-
-| File | Purpose |
-|:---|:---|
-| **index.html** | Main HTML5 page with semantic markup |
-| **style.css** | Modern CSS3 with animations, dark mode, responsive layout |
-| **app.js** | Vanilla JavaScript (no framework) for theme, navigation, animations |
-| **profile.jpg** | Professional profile photo |
-| **icon.jpg** | Favicon for browser tabs |
-| **certificates/** | Folder containing qualification documents |
+| Item | Details |
+| --- | --- |
+| Name | Nady Emad |
+| Role | Networks and Cyber Security Student |
+| University | SUT University |
+| Portfolio Type | Personal Portfolio / Digital Profile |
+| Design Direction | Modern, dark-mode, cybersecurity-themed, recruiter-friendly |
+| Core Stack | HTML5, CSS3, JavaScript |
 
 ---
 
-## ⚡ Key Highlights
+## Experience Highlights
 
-<div align="center">
-
-```
-✨ SPECIALIZED IN RANSOMWARE DETECTION ✨
-         97%+ Detection Accuracy
-   Intelligent Threat Scoring System
-```
-
-</div>
-
-- 🎯 **Full-Stack Development** — Building secure applications with cutting-edge technologies
-- 📚 **Continuous Learner** — Always staying ahead of the latest cybersecurity trends
-- 🏆 **Project-Driven** — Multiple completed projects showcasing practical security implementations
-- ⚙️ **Systems Expert** — Deep understanding of OS, networks, and infrastructure
+| Area | What is included |
+| --- | --- |
+| Navigation | Sticky navbar, active section highlight, smooth scrolling, mobile full-screen menu |
+| Hero | Professional identity card, recruiter-ready profile presentation, CTA buttons |
+| UI Style | Dark-first palette, neon security accents, glassmorphism cards, premium spacing and typography |
+| Projects | Filterable project cards, featured security work first, direct GitHub links |
+| Certificates | Organized certificate and badge cards, lazy-loaded previews, lightbox modal |
+| Contact | Clickable social/contact cards, copy-email action, toast feedback, contact form |
+| Responsiveness | Mobile-first improvements for phones, tablets, small laptops, and desktop screens |
+| Extras | Theme toggle, animated counters, back-to-top button, custom 404 page |
 
 ---
 
-## 🚀 Featured Projects
+## Site Sections
 
-### 🔐 **Ransomware Detection Suite**
-```
-████████████████████████ 97%+ Accuracy
-```
-**Production-ready security solution** combining file behavior analysis, CPU/IO monitoring, and command-line threat detection.
+The portfolio currently includes these main sections:
 
-```
-✓ 97%+ detection accuracy
-✓ Intelligent threat scoring system
-✓ Minimal system overhead
-✓ Real-time threat monitoring
-```
-**[⭐ View on GitHub](https://github.com/Nady-Emad)** | **[📖 Documentation](#)**
+1. `Home`
+2. `About`
+3. `Skills`
+4. `Certificates`
+5. `Projects`
+6. `Achievements`
+7. `Contact`
+8. `Send Me`
 
 ---
 
-### 📦 **Advanced ZIP Archive Manager**
-```
-████████████████████░░░░ Advanced Features
-```
-**Professional-grade compression utility** with GUI and CLI interfaces.
+## Featured Repositories
 
-```
-✓ Password protection & encryption
-✓ Batch operations support
-✓ Compression analysis & optimization
-✓ Built with Python & PyQt5
-✓ Standalone executable (v3.2)
-✓ Cross-platform compatibility
-```
-**[⭐ View on GitHub](https://github.com/Nady-Emad)** | **[💾 Download Executable](#)**
+The projects below are ordered to match the current portfolio showcase, with the strongest security-related work presented first.
 
----
-
-### 🔑 **Encryption Toolkit**
-```
-████████████████░░░░░░░░ Security First
-```
-**Secure encryption solution** featuring classical ciphers and modern AES-256-GCM encryption.
-
-```
-✓ Multiple encryption algorithms
-✓ Classical & modern ciphers
-✓ AES-256-GCM encryption
-✓ Modern PyQt5 GUI interface
-✓ Professional-grade implementation
-```
-**[⭐ View on GitHub](https://github.com/Nady-Emad)** | **[🔐 Security Details](#)**
+| # | Repository | Focus | Link |
+| --- | --- | --- | --- |
+| 01 | RansomShield | Ransomware detection, threat scoring, defensive tooling | [Open GitHub](https://github.com/Nady-Emad/RansomShield) |
+| 02 | CipherForge Suite | Encryption toolkit with classical ciphers and AES-256-GCM | [Open GitHub](https://github.com/Nady-Emad/CipherForge-Suite) |
+| 03 | WebSec_240102590 | Secure web concepts and hands-on web security practice | [Open GitHub](https://github.com/Nady-Emad/WebSec_240102590) |
+| 04 | UniShield | Security-focused university concept and defensive design thinking | [Open GitHub](https://github.com/Nady-Emad/UniShield) |
+| 05 | ZIP Archive Manager | Python desktop utility with GUI, CLI, and archive management features | [Open GitHub](https://github.com/Nady-Emad/ZIP-Archive-Manager) |
+| 06 | Digital Profile | This portfolio project and digital profile website | [Open GitHub](https://github.com/Nady-Emad/myproject) |
+| 07 | University System | University system workflow and software structure project | [Open GitHub](https://github.com/Nady-Emad/University-System) |
+| 08 | CarRentalSystem | Business logic and workflow-oriented application project | [Open GitHub](https://github.com/Nady-Emad/CarRentalSystem) |
+| 09 | FullStack-WebLabs-2025 | Full-stack labs and practical learning exercises | [Open GitHub](https://github.com/Nady-Emad/FullStack-WebLabs-2025) |
+| 10 | AURVEX | Team-based collaborative technical project | [Open GitHub](https://github.com/KirolosArian/AURVEX) |
+| 11 | Nady-Emad Profile Repository | Public GitHub profile branding and developer identity | [Open GitHub](https://github.com/Nady-Emad/Nady-Emad) |
 
 ---
 
-### 📄 **Digital Portfolio Website**
-```
-████████████░░░░░░░░░░░░ Responsive Design
-```
-**This responsive web application** serves as a comprehensive resume and portfolio hub.
+## Skills Covered in the Portfolio
 
-- 🎨 Dark/Light theme support
-- 🚀 Smooth animations & modern UI
-- 📊 Project showcase & certificates display
-- 📧 Contact management system
-- ⚡ High performance & accessibility
-- 📱 Mobile-first responsive design
+The portfolio currently highlights these technical areas:
 
-**[⭐ View on GitHub](https://github.com/Nady-Emad)** | **[🌐 Live Demo](#)**
-
----
-
-## 🛠️ Tech Stack
-
-### **Frontend Architecture**
-```
-┌────────────────────────────────┐
-│  HTML5 - Semantic Markup       │
-│  CSS3 - Modern Styling         │
-│  Vanilla JS - Lightweight      │
-└────────────────────────────────┘
-         ↓ NO FRAMEWORKS ↓
-      Zero Dependencies
-     High Performance
-```
-
-### **Backend Infrastructure**
-```
-Node.js Runtime
-├── Express.js (Web Framework)
-├── Body-Parser (Request Handling)
-└── Nodemailer (Email Services)
-```
-
-### **DevOps & Deployment**
-```
-📦 npm Package Management
-🔧 Modern Web Standards
-⚡ Performance Optimized
-🔒 Security Hardened
-```
+- Python
+- Linux
+- Java
+- JavaScript
+- HTML
+- CSS
+- Network Security
+- Git
+- SQL
+- Laravel
+- Web and Security Technologies
+- Digital Forensics
+- Linux and Shell Programming
+- Penetration Testing
+- Responsive Front-End Development
 
 ---
 
-## 💼 Technical Skills
+## Certificates Showcase
 
-### **Languages & Frameworks**
-```
-┌─────────────────────────────────────────┐
-│ Python      │ JavaScript   │ Java        │
-│ PHP         │ HTML/CSS     │ PowerShell  │
-├─────────────────────────────────────────┤
-│ Express.js  │ PyQt5        │ Streamlit   │
-│ Node.js     │ Vanilla JS   │ REST APIs   │
-└─────────────────────────────────────────┘
-```
+The certificates section is built around organized image assets inside `/certificates`, with:
 
-### **Tools & Platforms**
-```
-┌──────────────────────────────────────────┐
-│ 🐧 Kali Linux         🪟 Windows         │
-│ 📚 Git & GitHub       🌐 Cisco PT        │
-│ 🔍 Nessus             💿 Virtual Machines│
-│ 🐳 Docker             📧 Nodemailer      │
-└──────────────────────────────────────────┘
-```
+- lazy-loaded certificate previews
+- badge indicators
+- full-image modal / lightbox
+- responsive grid on larger screens
+- horizontal slider behavior only on very small mobile screens
 
-### **Security & Development Focus**
-```
-┌────────────────────────────────────────────┐
-│ Penetration Testing  │  Network Config    │
-│ Vuln. Assessment     │  Full-Stack Dev    │
-│ Threat Analysis      │  Database Mgmt     │
-│ Risk Modeling        │  API Integration   │
-└────────────────────────────────────────────┘
+<details>
+<summary>Certificate and badge assets</summary>
+
+- `cert-network-fundamentals.jpg`
+- `cert-ethical-hacking.jpg`
+- `cert-network-security.jpg`
+- `cert-cybersecurity-for-all.jpg`
+- `cert-cyber-threat-management.jpg`
+- `cert-cisco-packet-tracer.jpg`
+- `cert-cyberx-summit.jpg`
+- `badge-network-fundamentals.png`
+- `badge-ethical-hacking.png`
+- `badge-network-security.png`
+
+</details>
+
+---
+
+## Responsive and UX Notes
+
+The current front-end implementation is tuned for a modern, mobile-first experience:
+
+- `1024px and below`: tighter layout spacing and 2-column content where appropriate
+- `768px and below`: single-column layout for most sections, mobile navigation overlay, larger touch targets
+- `480px and below`: tighter spacing, full-width buttons, mobile certificate slider
+
+Additional UX improvements:
+
+- semantic HTML structure
+- keyboard-accessible controls
+- visible focus states
+- lazy-loaded media
+- reduced-motion friendly behavior
+- safe external link handling via JavaScript
+- form validation before mail client handoff
+
+---
+
+## Tech Stack
+
+| Layer | Tools |
+| --- | --- |
+| Markup | HTML5 semantic structure |
+| Styling | CSS variables, Grid, Flexbox, responsive media queries, modern card effects |
+| Interactivity | Vanilla JavaScript, scroll effects, counters, theme toggle, modal, toast feedback |
+| Typography | IBM Plex Sans Arabic, Space Grotesk |
+| Deployment | Static hosting, GitHub Pages ready |
+
+> Note: `package.json` and `package-lock.json` exist in the repository, but the portfolio UI itself does not require a build step and can run as a plain static site.
+
+---
+
+## Project Structure
+
+```text
+myproject/
+|-- index.html
+|-- style.css
+|-- app.js
+|-- 404.html
+|-- README.md
+|-- icon.ico
+|-- profile.png
+|-- profile.jpg
+|-- google87c5824a39e30af8.html
+|-- package.json
+|-- package-lock.json
+`-- certificates/
+    |-- cert-network-fundamentals.jpg
+    |-- cert-ethical-hacking.jpg
+    |-- cert-network-security.jpg
+    |-- cert-cybersecurity-for-all.jpg
+    |-- cert-cyber-threat-management.jpg
+    |-- cert-cisco-packet-tracer.jpg
+    |-- cert-cyberx-summit.jpg
+    |-- badge-network-fundamentals.png
+    |-- badge-ethical-hacking.png
+    `-- badge-network-security.png
 ```
 
 ---
 
-## 🚀 Run Locally
+## Run Locally
 
-You can open `index.html` directly in your browser, or run a simple HTTP server to serve the files **(recommended for consistent behavior)**:
+Because the site is static, you can run it in any of these simple ways:
 
-### **PowerShell (Windows) using Python 3:**
+### Option 1: Open directly
+
+Open `index.html` in your browser.
+
+### Option 2: Start a local static server
 
 ```powershell
-# Open PowerShell in the project folder
-cd path/to/portfolio
+cd C:\xampp\htdocs\myproject
 python -m http.server 8000
-
-# Then open your browser at: http://localhost:8000
 ```
 
-### **Bash (macOS/Linux) using Python 3:**
+Then open:
 
-```bash
-# Navigate to project directory
-cd path/to/portfolio
-python3 -m http.server 8000
-
-# Then open your browser at: http://localhost:8000
+```text
+http://localhost:8000
 ```
 
-### **Alternative: VS Code Live Server**
+### Option 3: Use VS Code Live Server
 
-If you're using **Visual Studio Code**:
-1. Install the "Live Server" extension
-2. Right-click on `index.html`
-3. Click **"Open with Live Server"**
-4. Your browser will open automatically with live reload
-
-### **Alternative: Node.js HTTP Server**
-
-```bash
-# Using npx with http-server
-npx http-server
-
-# Or install globally
-npm install -g http-server
-http-server
-```
+Open the project folder in VS Code and launch `index.html` with Live Server.
 
 ---
 
-## 📋 Notes
+## Deployment
 
-<div align="center">
+This project is ready for static deployment on platforms such as:
 
-```
-🔒 IMPORTANT DETAILS & FEATURES 🔒
-```
+- GitHub Pages
+- Netlify
+- Vercel static hosting
 
-</div>
-
-- ✅ **Contact Links Security** — Contact links prompt a confirmation before redirecting to prevent accidental opens
-- 📜 **Certificate Management** — Certificates are stored in the `certificates/` folder and shown as images (some entries are PDFs)
-- 🔧 **Zero Build Steps** — The project has **no external build steps or dependencies** — it's pure static files with vanilla JavaScript
-- 🌓 **Theme Persistence** — User's theme preference (light/dark) is automatically saved to localStorage
-- 📱 **Mobile Optimized** — All images lazy-loaded for better mobile performance
-- 🎬 **Smooth Animations** — Blur text animations, scroll effects, and modern transitions for enhanced UX
+The repository already includes a custom `404.html`, which helps the project feel more polished in production.
 
 ---
 
-## 📊 Portfolio Statistics
+## Contact
 
-<div align="center">
-
-| 📁 Projects | 🏆 Certificates | ⚙️ Level |
-|:---:|:---:|:---:|
-| **4+** Completed | **Multiple** Credentials | **Advanced** Practitioner |
-
-</div>
-
----
-
-## 🎓 Education & Learning Path
-
-<div align="center">
-
-```
-SUT University, Cairo, Egypt
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Networks & Cyber Security
-```
-
-</div>
-
-### Current Coursework
-```
-✓ Cyber and Information Security
-✓ Advanced Networks & Configuration
-✓ Operating Systems & Administration
-✓ Web Programming & Development
-✓ Database Management & Design
-```
-
-### Specializations
-```
-🔍 Threat Detection & Analysis
-🛡️ Network Security & Hardening
-🔐 Cryptography & Encryption
-💻 Secure Application Development
-```
+| Platform | Link |
+| --- | --- |
+| GitHub | [github.com/Nady-Emad](https://github.com/Nady-Emad) |
+| LinkedIn | [linkedin.com/in/nadyemad](https://www.linkedin.com/in/nadyemad/) |
+| Instagram | [instagram.com/nady.emad.nady](https://www.instagram.com/nady.emad.nady/) |
+| WhatsApp | [wa.me/201205855148](https://wa.me/201205855148) |
+| Facebook | [facebook.com/nady.emad.75](https://www.facebook.com/nady.emad.75/) |
+| Email | [nady240102590@sut.edu.eg](mailto:nady240102590@sut.edu.eg) |
 
 ---
 
-## 🌟 Website Features
+## Summary
 
-### **🎨 Modern Design**
-```
-✨ Responsive layout (mobile, tablet, desktop)
-✨ Smooth scroll navigation with active tracking
-✨ Professional typography & color scheme
-✨ Dark/Light theme toggle system
-✨ Glassmorphism & modern UI elements
-```
+This repository is more than a simple personal page. It is a structured digital profile built to present Nady Emad as a serious cybersecurity student with:
 
-### **⚙️ Advanced Functionality**
-```
-🔧 Intersection Observer for active navigation
-🔧 Lazy image loading optimization
-🔧 Toast notifications for user feedback
-🔧 Blur text animations on scroll
-🔧 Mobile-friendly hamburger menu
-🔧 Smooth page transitions
-```
+- a recruiter-friendly personal brand
+- practical project work
+- visible technical growth
+- organized credentials
+- modern responsive UI and UX
 
-### **📬 Contact Integration**
-```
-📧 Secure email contact form
-💬 Direct messaging capability
-🔒 Form validation & security
-🔗 External link confirmation system
-📱 WhatsApp integration
-```
-
----
-
-## 📱 Responsive & Accessible
-
-<div align="center">
-
-```
-✅ Mobile-first Design        ✅ Keyboard Navigation
-✅ Touch-friendly Interface   ✅ ARIA Labels
-✅ Cross-browser Support      ✅ SEO Optimized
-✅ Performance Optimized      ✅ Image Lazy Loading
-```
-
-</div>
-
----
-
-## 🔗 Connect With Me
-
-<div align="center">
-
-```
-╔══════════════════════════════════════╗
-║    Let's Build Secure Together      ║
-╚══════════════════════════════════════╝
-```
-
-| 📱 Platform | 🔗 Link |
-|:---:|:---|
-| **GitHub** | [github.com/Nady-Emad](https://github.com/Nady-Emad) |
-| **Email** | [nady240102590@sut.edu.eg](mailto:nady240102590@sut.edu.eg) |
-| **Location** | Cairo, Egypt 🇪🇬 |
-| **LinkedIn** | [linkedin.com/in/nadyemad](https://linkedin.com) |
-
-</div>
-
----
-
-## 📈 Growth & Roadmap
-
-<div align="center">
-
-```
-Current  ████████████░░░░░░░░  80% Advanced
-Next     ░░░░░░░░░░░░░░░░░░░░  Expert Level
-
-Timeline: Q1 2026 - Senior Security Engineer
-```
-
-</div>
-
----
-
-## 🚀 Future Enhancements
-
-This README is prepared to help you run and understand the project. If you'd like help with:
-
-- 📤 **Publishing to GitHub Pages** — Deploy the site for free hosting
-- ⚡ **Performance Optimization** — Advanced caching & bundling strategies
-- 📬 **Working Contact Form** — Backend implementation with Nodemailer
-- 🔐 **SSL/HTTPS Setup** — Secure deployment configuration
-- 📊 **Analytics Integration** — Track portfolio visitors
-- 🤖 **SEO Improvements** — Better search engine visibility
-
-**Tell me which you'd prefer and I will implement it!**
-
----
-
-## 📝 License & Attribution
-
-**License:** Personal / No license specified
-
-This portfolio website and associated projects are shared for educational and professional purposes. Please respect intellectual property rights when using any code or resources.
-
----
-
-<div align="center">
-
-### ⚡ **ALWAYS LEARNING • ALWAYS SECURING • ALWAYS INNOVATING** ⚡
-
-```
-╔════════════════════════════════════════╗
-║   Building Tomorrow's Security Today   ║
-╚════════════════════════════════════════╝
-```
-
-*Built with passion for cybersecurity and precision in code.*
-
-**Last Updated:** December 19, 2025
-
----
-
-</div>
+If you are reviewing the project for hiring, collaboration, or academic interest, the portfolio is intended to make that evaluation fast, clear, and professional.
